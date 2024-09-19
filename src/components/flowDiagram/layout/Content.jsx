@@ -6,5 +6,6 @@ export const Content = styled.div`
   flex-direction: column;
   flex: 1;
   overflow: hidden;
-  max-height: 80vh;
+  max-height: 75vh;
+  background-color: white;
 `

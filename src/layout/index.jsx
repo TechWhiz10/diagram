@@ -74,7 +74,7 @@ export default function PageLayout() {
   return (
     <Box>
       <Header />
-      <Flex direction="column" minHeight="calc(100vh - 73px)">
+      <Flex direction="column" minHeight="calc(100vh - 60vh)">
         <Box as="main" flex="1">
           <Container />
         </Box>

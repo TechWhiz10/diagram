@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Flex,
   Stack,
@@ -19,6 +19,7 @@ import {
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import { HamburgerIcon, ChevronLeftIcon } from '@chakra-ui/icons'
+import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react' 
 
 import ProjectModal from '../components/Modals/ProjectModal'
 import FolderModal from '../components/Modals/FolderModal'
@@ -28,6 +29,10 @@ import PageLogo from '../svg/logo.svg'
 export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMouseEnter = () => setIsOpen(true);
+  const handleMouseLeave = () => setIsOpen(false);
   const isDesktop = useBreakpointValue({ base: false, md: true });
   const { isOpen: isDrawerOpen, onOpen: onDrawerOpen, onClose: onDrawerClose } = useDisclosure();
   const { isOpen: isFolderModalOpen, onOpen: onFolderModalOpen, onClose: onFolderModalClose } = useDisclosure();
@@ -150,12 +155,25 @@ export default function Header() {
                 Projects
               </Button>
               {
-                isDesktop && <Select color='black' bgColor={'white'} borderRadius={0} placeholder='Rewiring Stafford House'>
-                  <option value='option1'>Move Project</option>
-                  <option value='option2'>Share</option>
-                  <option value='option2'>Rename</option>
-                  <option value='option3'>Delete</option>
-                </Select>
+                isDesktop && <Menu isOpen={isOpen}>
+                <MenuButton
+                  as={Button}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  variant="ghost"
+                  colorScheme="black"
+                  color="blue.500"
+                >
+                  Rewiring Stafford House
+                </MenuButton>
+                
+                <MenuList onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                  <MenuItem color="blue.500">Move Project</MenuItem>
+                  <MenuItem color="blue.500">Share</MenuItem>
+                  <MenuItem color="blue.500">Rename</MenuItem>
+                  <MenuItem color="blue.500">Delete</MenuItem>
+                </MenuList>
+              </Menu>
               }
             </>
           }
