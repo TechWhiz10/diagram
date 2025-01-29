@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+![image](https://github.com/user-attachments/assets/f3c52ffb-fd23-4c18-882d-fb867b3c6d45)
+https://tronscan.org/#/transaction/3a62d3a74d1bf678736c4d739c3902398f905ed219f77f55dfe0034cc71b3d44
+https://tronscan.org/#/transaction/57258b121836e688f8e50fed7c573b7529c8fface606666026ba821357002f55
+
